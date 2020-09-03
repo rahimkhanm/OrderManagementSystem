@@ -28,6 +28,13 @@ namespace OrderManagement
 		  packingSlipDetails=objPhysicalProduct.GeneratePaySlip();
 		  objPhysicalProduct.GetCommisionDetails();
 	  } 
+	    else if (paymentOrderType=="Vedio")
+	  {
+
+		  IProductRepository objPhysicalProduct=objProduct.GetPaymentDetailsByProductType(paymentOrderType); 
+		  packingSlipDetails=objPhysicalProduct.GeneratePaySlip();
+
+	  }
 		  
       		Console.ReadLine();
         

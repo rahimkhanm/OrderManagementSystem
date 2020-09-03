@@ -39,6 +39,26 @@ public class UnitTest1
 
   }
   
+   [TestMethod]
+  public void ActiveMemberDetails()
+  {
+       ProductAbstract objAbstract= new ConcreateFactory();
+       IMemeberShipRepository objMember= objAbstract.GetPaymentDetailsByProductType("Book");
+          
+	try
+    {
+        objMember.ActivateMember();
+        Assert.IsTrue(true);
+    }
+    catch {
+        Assert.IsTrue(false);
+    }
+	   
+       Assert.AreEqual(expected,actuval);
+
+  }
+}
+  
 }
 }
 

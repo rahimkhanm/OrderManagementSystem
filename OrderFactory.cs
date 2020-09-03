@@ -18,7 +18,7 @@ namespace PaymentGateWay
  
     void ActivateMember();
     void SendNotificationMail();
-    void UpgrateMemberShip();
+    void UpgrateMemberShipByMemberId(int memberId);
  }
 // Product and MemberShip Abstract class
 public abstract class ProductAbstract

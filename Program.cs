@@ -35,6 +35,19 @@ namespace OrderManagement
 		  packingSlipDetails=objPhysicalProduct.GeneratePaySlip();
 
 	  }
+	    else if (paymentOrderType=="MemberShip")
+	  {
+
+		  IPayamentRepository objMemberShip=objAMembership.GetPaymentDetailsByType(paymentOrderType); 
+		  packingSlipDetails=objMemberShip.GeneratePaySlip();
+		 //if member need to be activate need call below method
+		 objMemberShip.ActivateMember();
+
+		 //for member updatetion
+		 objMemberShip.UpgrateMemberShipByMemberId(123);
+		 //send Activation/updatetion mail to member
+		 objMemberShip.SendNotificationMail();
+	  }
 		  
       		Console.ReadLine();
         

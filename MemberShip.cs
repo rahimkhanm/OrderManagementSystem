@@ -15,7 +15,7 @@ namespace PaymentGateWay
             console.Writeline(" Mail sucessfully sent to member");
        }
        
-       public void UpgradeMemberPlan(int memberId)
+       public void UpgrateMemberShipByMemberId(int memberId)
        {
            console.Writeline(" Membership sucessfully added for member id {0}",memberId);
        }

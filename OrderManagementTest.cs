@@ -17,6 +17,27 @@ public class UnitTest1
        Assert.AreEqual(expected,actuval);
 
   }
+  [TestMethod]
+  public void GenrateProductOrderPackiSlip()
+  {
+       ProductAbstract objAbstract= new ConcreateFactory();
+       IPayamentRepository objBook= objAbstract.GetPaymentDetailsByProductType("Book");
+       string expected="Physical order packing slip generaed";
+       string actuval=objBook.GeneratePackingSlip();
+       Assert.AreEqual(expected,actuval);
+
+  }
+  
+  [TestMethod]
+  public void GenrateVideoOrderPackiSlip()
+  {
+       ProductAbstract objAbstract= new ConcreateFactory();
+       IPayamentRepository objBook= objAbstract.GetPaymentDetailsByProductType("Book");
+       string expected="Video packing slip generaed";
+       string actuval=objBook.GeneratePackingSlip();
+       Assert.AreEqual(expected,actuval);
+
+  }
   
 }
 }
